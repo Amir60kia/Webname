@@ -1,0 +1,30 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href={% static 'staticuser.css'%}>
+    <meta charset="utf-8">
+    <title>
+صفحه ورود
+    </title>
+  </head>
+  <body>
+    <h2>
+<h3><a href="http://127.0.0.1:7000/">صفحه خانه</a></h3>
+    </h2>
+    {%block content%}
+    <center>
+    <h1>صفحه ورود</h1>
+    </center>
+    <form class="site-form" action="/accounts/signup" method="post">
+      {{form}}
+      {%csrf_token%}
+      <input type="submit" name="" value=" ثبت اطلاعات ">
+
+    </form>
+
+
+
+    {%endblock%}
+  </body>
+</html>

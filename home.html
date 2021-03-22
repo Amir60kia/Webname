@@ -1,0 +1,60 @@
+
+{%load static%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <style type="text/css">
+.menu{direction:rtl}
+.menu li{display:inline-block;}
+.menu li ul{position:absolute;padding:0;visibility:hidden}
+.menu li ul li{display:block}
+.menu li:hover > ul{visibility:visible}
+</style>
+    <link rel="stylesheet" href={% static 'home.css'%}>
+    <meta charset="utf-8">
+    <title>
+    صفحه خانه
+
+    </title>
+  </head>
+  <body><center>
+      <h1>صفحه خانه</h1></center>
+
+
+<ul class="menu">
+
+
+<li><a href="http://127.0.0.1:7000/">صفحه خانه</a>
+  <ul>
+      <li><a href="">آیتم شماره 1</a></li>
+      <li><a href="">آیتم شماره 2</a></li>
+      <li><a href="">آیتم شماره 3</a></li>
+  </ul></li>
+<li><a href="{% url 'articles:list' %}">مقالات ما</a>
+  <ul>
+      <li><a href="">آیتم شماره 1</a></li>
+      <li><a href="">آیتم شماره 2</a></li>
+      <li><a href="">آیتم شماره 3</a></li>
+  </ul></li>
+<li><a href="{% url 'free:list' %}">صفحه اپ ما</a>
+  <ul>
+      <li><a href="">آیتم شماره 1</a></li>
+      <li><a href="">آیتم شماره 2</a></li>
+      <li><a href="">آیتم شماره 3</a></li>
+  </ul></li>
+<li><a href="/accounts/signup">صفحه عضویت</a>
+  <ul>
+      <li><a href="">آیتم شماره 1</a></li>
+      <li><a href="">آیتم شماره 2</a></li>
+      <li><a href="">آیتم شماره 3</a></li>
+  </ul></li>
+<li><a href="/accounts/login">صفحه ورود</a>
+  <ul>
+      <li><a href="">آیتم شماره 1</a></li>
+      <li><a href="">آیتم شماره 2</a></li>
+      <li><a href="">آیتم شماره 3</a></li>
+  </ul></li>
+</ul>
+
+  </body>
+</html>

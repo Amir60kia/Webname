@@ -1,0 +1,29 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+      <link rel="stylesheet" href={% static 'articles.css'%}>
+        <meta charset="utf-8">
+    <title>
+        مقالات ما
+      </title>
+  </head>
+  <body>
+<h3><a href="http://127.0.0.1:7000/">صفحه خانه</a></h3>
+<h4><a href="{% url 'articles:list' %}">مقالات ما</a></h4>
+<h5><a href="{% url 'free:list' %}">صفحه اپ ما</a></h5>
+
+<div class="article_detial">
+      <div class="articless">
+        <img class="img" src="{{articles.images.url}}" width="500px" height="342px" alt="">
+        <h4 class="title">{{articles.title}}</h4>
+        <p class="mt">{{articles.body}}</p>
+        <p class="date" >{{articles.date}}</p>
+
+
+     </div>
+
+</div>
+
+  </body>
+</html>

@@ -1,0 +1,18 @@
+{%extends 'base.html'%}
+{%block title%}
+صفحه اپ
+{%endblock%}
+{%block content%}
+<div class="container_1">
+    <h1><center>
+      صفحه اپ
+    </center>
+  </h1>
+  </div>
+    {% for free in free_1 %}
+      <h2><a href="{% url 'free:detial' slug=free.slug %}">{{free.title}}</a>
+      <p>{{free.snippet}}</p>
+      <p>{{free.date}}</p>
+    {%endfor%}
+    </h2>
+{%endblock%}

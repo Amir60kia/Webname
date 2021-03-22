@@ -1,0 +1,16 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>مقالات</title>
+  </head>
+  <body>
+    <h1>مقالات من</h1>
+    {% for articles in article %}
+    <h2><a href="#">{{article.title}}</a></h2>
+    <p>{{article.body}}</p>
+    <p>{{article.date}}</p>
+
+
+    {% endfor %}
+  </body>
+</html>
